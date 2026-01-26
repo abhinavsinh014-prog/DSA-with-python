@@ -1,8 +1,11 @@
 def add(n1,n2):
     print("Sum :-",n1+n2)
-def sum(n2,n3):
-    print("Subtract :-",n2-n3)
+
 a , b = int(input()) , int(input()) 
 add(a,b)
+
+
+def sub(n2,n3):
+    print("Subtract :-",n2-n3)
 c , d = int(input()) , int(input()) 
-sum(c,d)
+sub(c,d)
