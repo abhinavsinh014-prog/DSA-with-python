@@ -12,3 +12,4 @@ print("after pop",list1)
 
 dam = list1.pop(4)
 print(dam)
+
