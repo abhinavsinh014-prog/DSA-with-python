@@ -4,10 +4,12 @@ choice = ["rock","paper","scissor"]
 print("welcome to the rock,paper and scissor game \nchoose your option \n1.rock 2.paper 3.scissor")
 user_score = 0
 computer_score = 0
-
+round_no = 1
 while True:
+    print(f"Round {round_no}")
     user_choice = input().lower()
     computer_choice = random.choice(choice)
+
     print(f"Your choice: {user_choice}\nComputer choice: {computer_choice}")
 
     if (
@@ -31,5 +33,7 @@ while True:
 
     play_again = input("Do you want to play more (yes/no):").lower()
     if play_again != "yes":
-        print("\n.......Thanks for playing")
+        print(f"\n.......Thanks for playing \n Total round played: {round_no}")
+        print(f"Final score \nYour score:{user_score} \ncomputer:{computer_score}")
         break
+    round_no += 1
