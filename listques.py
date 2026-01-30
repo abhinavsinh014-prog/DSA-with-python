@@ -27,3 +27,9 @@ marks = {
 
 if "Math" in marks:
     print("Math marks:", marks["Math"])
+
+colors = ("red", "green", "blue")
+
+for color in colors:
+    print(color)
+print("Number of colors:", len(colors))
