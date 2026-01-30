@@ -9,3 +9,12 @@ while i <= 5:
     i += 1
 
 print("Sum is:", sum)
+
+student = {
+    "name": "Alex",
+    "age": 20,
+    "course": "Python"
+}
+
+for key, value in student.items():
+    print(key, ":", value)
