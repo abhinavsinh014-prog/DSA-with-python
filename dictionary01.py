@@ -8,9 +8,6 @@ dick = {
     "mohit"  : 289
 }
 
-# for key,value in dick.items():
-#     print(f"{key} has scored {value} out of 1000")
-
 search = input()
 if search in dick:
     marks = dick[search]
