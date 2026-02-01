@@ -1,4 +1,13 @@
-balance = 15975
+bank = { 
+    "aditi" : 95454,
+    "naman" : 89878,
+    "randy" : 65256,
+    "john"  : 31218,
+    "pandat" : 31982,
+    "gadariya":56512,
+    "mohit"  : 28879
+}
+person = input("Enter your name: ")
 while True:
     action = input("Choose an action (check balance, deposit, withdraw, exit): ")
     if action == "check balance":
@@ -22,4 +31,5 @@ while True:
         break
     else:
         print("Invalid action. Please try again.")
+
 
