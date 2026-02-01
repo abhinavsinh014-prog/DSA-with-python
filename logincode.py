@@ -9,7 +9,7 @@
 
 #login interface
 username = input()
-password = input()
+password = int(input())
 
 data = {
     "aditi" : 1010,
@@ -21,9 +21,9 @@ data = {
     "mohit"  : 2589
 }
 if username in data:
-    if password in data:
-        print("wb")
+    if data[username] == password:
+        print("Login succesfull \n  Welcome back", username)
     else:
-        print("invp")
+        print("wrong password")
 else:
-    print("inv")
+    print("invalid username \n Please try again")
