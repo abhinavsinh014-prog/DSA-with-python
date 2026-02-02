@@ -32,5 +32,3 @@ if person in bank:
             break
         else:
             print("Invalid action. Please try again.")
-
-
