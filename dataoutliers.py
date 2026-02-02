@@ -6,4 +6,5 @@ dataset = [11,12,13,15,16,14,18,17,780,985,17,15,16,14,13,12,18,754,19,11,789,17
 
 
 print("Mean:", np.mean(dataset))
-print("Median:", np.median(dataset))        
+print("Median:", np.median(dataset)) 
+
