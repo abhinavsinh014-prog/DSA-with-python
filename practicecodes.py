@@ -56,3 +56,10 @@ for i in set1:
             common.add(i)
 
 print("Common elements:", common)
+
+
+list = [1, 2, 3, 4, 5]
+rev = []
+for i in range(-1,-len(list)-1,-1):
+    rev.append(list[i])
+print("Reversed list:", rev)
