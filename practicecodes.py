@@ -44,4 +44,15 @@ if found:
 else:
     print("Element not found")
 
+# This code finds the common elements between two sets.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
 
+common = set()
+
+for i in set1:
+    for j in set2:
+        if i == j:
+            common.add(i)
+
+print("Common elements:", common)
