@@ -27,3 +27,21 @@ for n in nums:
 
 print("Even:", even)
 print("Odd:", odd)
+
+# This code checks if a given number is prime or not.
+data = (10, 20, 30, 40, 50)
+key = int(input("Enter number: "))
+
+found = False
+
+for item in data:
+    if item == key:
+        found = True
+        break
+
+if found:
+    print("Element found")
+else:
+    print("Element not found")
+
+
