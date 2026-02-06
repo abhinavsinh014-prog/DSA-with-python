@@ -7,7 +7,7 @@ bank = {
     "gadariya":56512,
     "mohit"  : 28879
 }
-todo = input("Want to open new account or already have account")
+todo = input("Want to open new account or already have account (old/new):-")
 if todo != "new" :
     person = input("Enter your name: ")
     if person in bank:
@@ -34,3 +34,8 @@ if todo != "new" :
                 break
             else:
                 print("Invalid action. Please try again!")
+else:
+    ac_name = input("enter your name :-")
+    deposit_money = int(input("deposit money :-"))
+    bank[ac_name] = deposit_money
+    print("succesfully registered !")
