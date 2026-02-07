@@ -41,9 +41,9 @@ while running :
                     elif action == "withdraw":
                         amount = float(input("Enter amount to withdraw: "))
                         
-                        if 0 < amount <= bank[person]:
-                            bank[person] -= amount
-                            print(f"${amount} withdrawn.\nNew balance is: ${bank[person]}")
+                        if 0 < amount <= bank[person]["balance"]:
+                            bank[person]["balance"] -= amount
+                            print(f"${amount} withdrawn.\nNew balance is: ${bank[person]['balance']}")
                         
                         else:
                             print("Invalid withdrawal amount or insufficient funds.")
