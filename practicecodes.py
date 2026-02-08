@@ -78,13 +78,19 @@
 
 #fizzbuzz
 
-p = int(input("Enter number: "))
+# p = int(input("Enter number: "))
 
-if p%3==0 and p%5==0:
-    print("FizzBuzz",end=" ")
-elif p%3==0:
-    print("Fizz",end=" ")
-elif p%5==0:
-    print("Buzz",end=" ")
-else:
-    print(p,end=" ")    
+# if p%3==0 and p%5==0:
+#     print("FizzBuzz",end=" ")
+# elif p%3==0:
+#     print("Fizz",end=" ")
+# elif p%5==0:
+#     print("Buzz",end=" ")
+# else:
+#     print(p,end=" ")    
+
+#reverse string
+
+s = input("Enter string: ")
+for i in range(-1,-len(s)-1,-1):
+    print(s[i],end=" ")
