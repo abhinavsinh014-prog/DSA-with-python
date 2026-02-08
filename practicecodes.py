@@ -64,9 +64,14 @@
 #     rev.append(list[i])
 # print("Reversed list:", rev)
 
-#given
-n= int(input("Enter number: "))
-i=1
-while i**2<=n:
-    print(i**2,end=" ")
-    i+=1
+# #given
+# n= int(input("Enter number: "))
+# i=1
+# while i**2<=n:
+#     print(i**2,end=" ")
+#     i+=1
+
+#for loop
+v = int(input("Enter number: "))
+for i in range(1,11):
+    print(v*i,end=" ")
