@@ -72,6 +72,19 @@
 #     i+=1
 
 #for loop
-v = int(input("Enter number: "))
-for i in range(1,11):
-    print(v*i,end=" ")
+# v = int(input("Enter number: "))
+# for i in range(1,11):
+#     print(v*i,end=" ")
+
+#fizzbuzz
+
+p = int(input("Enter number: "))
+
+if p%3==0 and p%5==0:
+    print("FizzBuzz",end=" ")
+elif p%3==0:
+    print("Fizz",end=" ")
+elif p%5==0:
+    print("Buzz",end=" ")
+else:
+    print(p,end=" ")    
