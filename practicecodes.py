@@ -54,7 +54,7 @@ for i in set1:
     for j in set2:
         if i == j:
             common.add(i)
-
+print("common",common)
 diff = set()
 for i in set1:
     found = False
@@ -62,9 +62,9 @@ for i in set1:
         if i==j:
             found = True
             break
-        elif not found:
-            diff.add(i)
-
+    if not found:
+        diff.add(i)
+print("sum",set1|set2)
 print("differnt",diff)
 # print("Common elements:", common)
 
