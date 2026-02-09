@@ -45,16 +45,27 @@
 #     print("Element not found")
 
 # # This code finds the common elements between two sets.
-# set1 = {1, 2, 3, 4}
-# set2 = {3, 4, 5, 6}
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
 
-# common = set()
+common = set()
 
-# for i in set1:
-#     for j in set2:
-#         if i == j:
-#             common.add(i)
+for i in set1:
+    for j in set2:
+        if i == j:
+            common.add(i)
 
+diff = set()
+for i in set1:
+    found = False
+    for j in set2:
+        if i==j:
+            found = True
+            break
+        elif not found:
+            diff.add(i)
+
+print("differnt",diff)
 # print("Common elements:", common)
 
 # # This code reverses a list of numbers.
@@ -95,17 +106,19 @@
 # for i in range(-1,-len(s)-1,-1):
 #     print(s[i],end=" ")
 
-# 
-arr = [1, 2, 3, 4, 5]
-sum = 9
-found = False
-for i in range(1,len(arr),1):
-    for j in range(1,len(arr),1):
-        if arr[i]+arr[j] == sum:
-            print("pair found",arr[i],arr[j])
-            found = True
-            break
-if found:
-    print("present")
-else:
-    print("absent")      
+# # 
+# arr = [1, 2, 3, 4, 5]
+# sum = 9
+# found = False
+# for i in range(1,len(arr),1):
+#     for j in range(1,len(arr),1):
+#         if arr[i]+arr[j] == sum:
+#             print("pair found",arr[i],arr[j])
+#             found = True
+#             break
+# if found:
+#     print("present")
+# else:
+#     print("absent")     
+
+
