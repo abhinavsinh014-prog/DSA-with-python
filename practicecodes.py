@@ -95,11 +95,17 @@
 # for i in range(-1,-len(s)-1,-1):
 #     print(s[i],end=" ")
 
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
-common = set()
-for i in set1:
-    for j in set2:
-        if i == j:
-            common.add(i)
-print("Common elements:", common)
+# 
+arr = [1, 2, 3, 4, 5]
+sum = 9
+found = False
+for i in range(1,len(arr),1):
+    for j in range(1,len(arr),1):
+        if arr[i]+arr[j] == sum:
+            print("pair found",arr[i],arr[j])
+            found = True
+            break
+if found:
+    print("present")
+else:
+    print("absent")      
