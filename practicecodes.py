@@ -45,27 +45,27 @@
 #     print("Element not found")
 
 # # This code finds the common elements between two sets.
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
+# set1 = {1, 2, 3, 4}
+# set2 = {3, 4, 5, 6}
 
-common = set()
+# common = set()
 
-for i in set1:
-    for j in set2:
-        if i == j:
-            common.add(i)
-print("common",common)
-diff = set()
-for i in set1:
-    found = False
-    for j in set2:
-        if i==j:
-            found = True
-            break
-    if not found:
-        diff.add(i)
-print("sum",set1|set2)
-print("differnt",diff)
+# for i in set1:
+#     for j in set2:
+#         if i == j:
+#             common.add(i)
+# print("common",common)
+# diff = set()
+# for i in set1:
+#     found = False
+#     for j in set2:
+#         if i==j:
+#             found = True
+#             break
+#     if not found:
+#         diff.add(i)
+# print("sum",set1|set2)
+# print("differnt",diff)
 # print("Common elements:", common)
 
 # # This code reverses a list of numbers.
@@ -121,4 +121,9 @@ print("differnt",diff)
 # else:
 #     print("absent")     
 
+n = int(input("enter your number :-"))
+if n%2==0:
+    print("even")
+else :
+    print("odd")
 
