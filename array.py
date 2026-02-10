@@ -30,3 +30,11 @@ print(a1)
 # a1.tolist()
 a1.remove(24)
 print(a1)
+
+import numpy as np
+a = np.array([12,65,23])
+print(a)
+
+b = np.array([[2,5,9],[3,5,7]])
+print(b)
+
