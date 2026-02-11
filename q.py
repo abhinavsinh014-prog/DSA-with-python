@@ -62,8 +62,18 @@
 # result = obj.maxsubarray([2,-2,-3,5,-5,6,9,7,8]) 
 # print(result)   
 
+# class Solution:
+#     def missingNum(self, arr):
+#         n = len(arr) +1
+#         total = n*(n+1)//2
+#         return total - sum(arr)
+
 class Solution:
-    def missingNum(self, arr):
-        n = len(arr) +1
-        total = n*(n+1)//2
-        return total - sum(arr)
+    def getSecondLargest(self, arr):
+        arr3 = list(set(arr))
+        m = len(arr3)
+        if len(arr3)<2:
+            return -1
+        new_arr = max(arr3)
+        arr3.remove(new_arr)
+        return max(arr3)
