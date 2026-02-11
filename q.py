@@ -18,14 +18,20 @@
 # if not found:
 #        print([-1])
 
+# arr = [2,6,4,8,1,3,5,9]
+# m = len(arr)+1
+
+# total_sum = m*(m+1)//2
+
+# arr_sum = 0
+# for i in arr:
+#     arr_sum += i
+
+# missing = total_sum - arr_sum
+# print(missing)
+
 arr = [2,6,4,8,1,3,5,9]
-m = len(arr)+1
-
-total_sum = m*(m+1)//2
-
-arr_sum = 0
-for i in arr:
-    arr_sum += i
-
-missing = total_sum - arr_sum
-print(missing)
+m = max(arr)
+arr.remove(m)
+n = max(arr)
+print(n)
