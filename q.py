@@ -36,13 +36,28 @@
 # n = max(arr)
 # print(n)
 
-arr= [2,-2,-3,5,-5,6,9,7,8]
-n= len(arr)
-maxi  = float('-inf')
-total = 0
-for i in range(0,n):
-    total  = total + arr[i]
-    maxi = max(maxi,total)
-    if total<0:
+# arr= [2,-2,-3,5,-5,6,9,7,8]
+# n= len(arr)
+# maxi  = float('-inf')
+# total = 0
+# for i in range(0,n):
+#     total  = total + arr[i]
+#     maxi = max(maxi,total)
+#     if total<0:
+#         total = 0
+# print(maxi)
+
+class solution():
+    def maxsubarray(self,arr):
+        n= len(arr)
+        maxi  = float('-inf')
         total = 0
-print(maxi)
+        for i in range(0,n):
+            total  = total + arr[i]
+            maxi = max(maxi,total)
+            if total<0:
+                total = 0
+        return(maxi)
+obj = solution()
+result = obj.maxsubarray([2,-2,-3,5,-5,6,9,7,8]) 
+print(result)   
