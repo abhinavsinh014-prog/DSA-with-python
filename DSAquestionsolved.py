@@ -77,3 +77,6 @@ class Solution:
         new_arr = max(arr3)
         arr3.remove(new_arr)
         return max(arr3)
+obj = Solution()
+result = obj.getSecondLargest([2,6,4,8,1,3,5,9]) 
+print(result)    
