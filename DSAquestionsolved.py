@@ -68,15 +68,23 @@
 #         total = n*(n+1)//2
 #         return total - sum(arr)
 
-class Solution:
-    def getSecondLargest(self, arr):
-        arr3 = list(set(arr))
-        m = len(arr3)
-        if len(arr3)<2:
-            return -1
-        new_arr = max(arr3)
-        arr3.remove(new_arr)
-        return max(arr3)
-obj = Solution()
-result = obj.getSecondLargest([2,6,4,8,1,3,5,9]) 
-print(result)    
+# class Solution:
+#     def getSecondLargest(self, arr):
+#         arr3 = list(set(arr))
+#         m = len(arr3)
+#         if len(arr3)<2:
+#             return -1
+#         new_arr = max(arr3)
+#         arr3.remove(new_arr)
+#         return max(arr3)
+# obj = Solution()
+# result = obj.getSecondLargest([2,6,4,8,1,3,5,9]) 
+# print(result) 
+# 
+
+arr = [12,35,24,69,85,42,45]
+max = arr[0]
+for i in range(1,len(arr)):
+       if arr[i]>max:
+              max = arr[i]
+print(max)
