@@ -100,3 +100,11 @@ arr = [12,35,24,69,85,42,45]
 max = arr[0]
 for i in range(-1,-len(arr),-1):
        print(arr[i],end=" ")
+
+arr = [12,35,24,69,12,85,42,45]
+count = 0
+for i in range(1,len(arr)):
+       for j in range(1,len(arr)):
+              if i == j:
+                     count += 1
+print(count)
