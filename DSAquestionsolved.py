@@ -108,3 +108,17 @@ for i in range(1,len(arr)):
               if i == j:
                      count += 1
 print(count)
+
+arr = [12, 7, 9, 20, 33, 40]
+
+even_count = 0
+odd_count = 0
+
+for i in range(len(arr)):
+    if arr[i] % 2 == 0:
+        even_count = even_count + 1
+    else:
+        odd_count = odd_count + 1
+
+print("Even numbers:", even_count)
+print("Odd numbers:", odd_count)
