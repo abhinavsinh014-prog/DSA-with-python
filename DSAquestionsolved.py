@@ -87,11 +87,16 @@ max = arr[0]
 for i in range(1,len(arr)):
        if arr[i]>max:
               max = arr[i]
-print(max)
+print("maximin number",max)
 
 arr = [12,35,24,69,85,42,45]
 max = arr[0]
 for i in range(1,len(arr)):
        if arr[i]<max:
               max = arr[i]
-print(max)
+print("minimum number",max)
+
+arr = [12,35,24,69,85,42,45]
+max = arr[0]
+for i in range(-1,-len(arr),-1):
+       print(arr[i],end=" ")
