@@ -123,24 +123,50 @@
 # print("Even numbers:", even_count)
 # print("Odd numbers:", odd_count)
 
-arr = [10,23,56,45,3,21,5]
-for i in range(1,len(arr)):
-    for j in range(i,len(arr)):
-        if arr[i]<arr[j]:
-            print(arr[j],end=' ')
+# arr = [10,23,56,45,3,21,5]
+# for i in range(1,len(arr)):
+#     for j in range(i,len(arr)):
+#         if arr[i]<arr[j]:
+#             print(arr[j],end=' ')
+
+# class Solution:
+#     def leaders(self, arr):
+#         n = len(arr)
+#         result = []
+        
+#         max_from_right = arr[-1]
+#         result.append(max_from_right)
+        
+#         for i in range(n-2, -1, -1):
+#             if arr[i] >= max_from_right:
+#                 max_from_right = arr[i]
+#                 result.append(arr[i])
+        
+#         result.reverse()
+#         return result
+
+# arr = [3,2,1,2,3]
+# same = []
+# for i in range(1,len(arr)):
+    
+#     for j in range(1,len(arr)):
+#        if arr[i]==arr[j]:
+#               print(same.append(arr[i]))
+#        else:
+#            print('there is no repeating nuumber')
 
 class Solution:
-    def leaders(self, arr):
-        n = len(arr)
+    def findDuplicates(self, arr):
+        freq = {}
         result = []
         
-        max_from_right = arr[-1]
-        result.append(max_from_right)
-        
-        for i in range(n-2, -1, -1):
-            if arr[i] >= max_from_right:
-                max_from_right = arr[i]
-                result.append(arr[i])
-        
-        result.reverse()
+        for num in arr:
+            freq[num] = freq.get(num, 0) + 1
+            
+        for key in freq:
+            if freq[key] > 1:
+                result.append(key)
+                
         return result
+ans = Solution()
+print(ans.findDuplicates([3,2,1,2,3]))
