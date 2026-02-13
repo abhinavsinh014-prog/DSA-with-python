@@ -82,43 +82,49 @@
 # print(result) 
 # 
 
-arr = [12,35,24,69,85,42,45]
-max = arr[0]
+# arr = [12,35,24,69,85,42,45]
+# max = arr[0]
+# for i in range(1,len(arr)):
+#        if arr[i]>max:
+#               max = arr[i]
+# print("maximin number",max)
+
+# arr = [12,35,24,69,85,42,45]
+# max = arr[0]
+# for i in range(1,len(arr)):
+#        if arr[i]<max:
+#               max = arr[i]
+# print("minimum number",max)
+
+# arr = [12,35,24,69,85,42,45]
+# max = arr[0]
+# for i in range(-1,-len(arr),-1):
+#        print(arr[i],end=" ")
+
+# arr = [12,35,24,69,12,85,42,45]
+# count = 0
+# for i in range(1,len(arr)):
+#        for j in range(1,len(arr)):
+#               if i == j:
+#                      count += 1
+# print(count)
+
+# arr = [12, 7, 9, 20, 33, 40]
+
+# even_count = 0
+# odd_count = 0
+
+# for i in range(len(arr)):
+#     if arr[i] % 2 == 0:
+#         even_count = even_count + 1
+#     else:
+#         odd_count = odd_count + 1
+
+# print("Even numbers:", even_count)
+# print("Odd numbers:", odd_count)
+
+arr = [10,23,56,45,3,21,5]
 for i in range(1,len(arr)):
-       if arr[i]>max:
-              max = arr[i]
-print("maximin number",max)
-
-arr = [12,35,24,69,85,42,45]
-max = arr[0]
-for i in range(1,len(arr)):
-       if arr[i]<max:
-              max = arr[i]
-print("minimum number",max)
-
-arr = [12,35,24,69,85,42,45]
-max = arr[0]
-for i in range(-1,-len(arr),-1):
-       print(arr[i],end=" ")
-
-arr = [12,35,24,69,12,85,42,45]
-count = 0
-for i in range(1,len(arr)):
-       for j in range(1,len(arr)):
-              if i == j:
-                     count += 1
-print(count)
-
-arr = [12, 7, 9, 20, 33, 40]
-
-even_count = 0
-odd_count = 0
-
-for i in range(len(arr)):
-    if arr[i] % 2 == 0:
-        even_count = even_count + 1
-    else:
-        odd_count = odd_count + 1
-
-print("Even numbers:", even_count)
-print("Odd numbers:", odd_count)
+    for j in range(i,len(arr)):
+        if arr[i]<arr[j]:
+            print(arr[j],end=' ')
