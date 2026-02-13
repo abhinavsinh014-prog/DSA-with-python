@@ -145,28 +145,38 @@
 #         result.reverse()
 #         return result
 
-# arr = [3,2,1,2,3]
-# same = []
-# for i in range(1,len(arr)):
-    
-#     for j in range(1,len(arr)):
-#        if arr[i]==arr[j]:
-#               print(same.append(arr[i]))
-#        else:
-#            print('there is no repeating nuumber')
+
+# class Solution:
+#     def findDuplicates(self, arr):
+#         freq = {}
+#         result = []
+        
+#         for num in arr:
+#             freq[num] = freq.get(num, 0) + 1
+            
+#         for key in freq:
+#             if freq[key] > 1:
+#                 result.append(key)
+                
+#         return result
+# ans = Solution()
+# print(ans.findDuplicates([3,2,1,2,3]))
 
 class Solution:
-    def findDuplicates(self, arr):
-        freq = {}
-        result = []
+    def sort012(self, arr):
+        low = 0
+        mid = 0
+        high = len(arr) - 1
         
-        for num in arr:
-            freq[num] = freq.get(num, 0) + 1
-            
-        for key in freq:
-            if freq[key] > 1:
-                result.append(key)
+        while mid <= high:
+            if arr[mid] == 0:
+                arr[low], arr[mid] = arr[mid], arr[low]
+                low += 1
+                mid += 1
                 
-        return result
-ans = Solution()
-print(ans.findDuplicates([3,2,1,2,3]))
+            elif arr[mid] == 1:
+                mid += 1
+                
+            else:  # arr[mid] == 2
+                arr[mid], arr[high] = arr[high], arr[mid]
+                high -= 1
