@@ -213,3 +213,15 @@ print(ans.sort012([0,2,0,1,2,1,0,2]))
 #                 high -= 1
 # ans = Solution()
 # print(ans.sort012([0,2,0,1,2,1,0,2]))
+
+arr = [1,2,3,1,2,3,1,1]
+majority = 0
+for i in range(1,len(arr)):
+    for j in range(i+1,len(arr)):
+        if arr[i]==arr[j]:
+            majority += 1
+            lenght = len(arr)
+            if majority > lenght:
+                print('present')
+            else:
+                print('-1')
