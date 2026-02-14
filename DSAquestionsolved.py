@@ -226,10 +226,10 @@ for num in arr:
         count -= 1
 count =0
 for num in arr:
-    if count == 0:
-        num == majority
+    if num == majority:
+        count+=1
         
-if count == len(arr)//2:
+if count > len(arr)//2:
     print(majority) 
 else:
     print('-1') 
