@@ -233,3 +233,4 @@ if count > len(arr)//2:
     print(majority) 
 else:
     print('-1') 
+print(count)
