@@ -162,36 +162,36 @@
 # ans = Solution()
 # print(ans.findDuplicates([3,2,1,2,3]))
 
-class Solution:
-    def sort012(self, arr):
-        c0 = c1 = c2 = 0
+# class Solution:
+#     def sort012(self, arr):
+#         c0 = c1 = c2 = 0
         
-        for num in arr:
-            if num == 0:
-                c0 += 1
-            elif num == 1:
-                c1 += 1
-            else:
-                c2 += 1
+#         for num in arr:
+#             if num == 0:
+#                 c0 += 1
+#             elif num == 1:
+#                 c1 += 1
+#             else:
+#                 c2 += 1
         
-        i = 0
+#         i = 0
         
-        while c0 > 0:
-            arr[i] = 0
-            i += 1
-            c0 -= 1
+#         while c0 > 0:
+#             arr[i] = 0
+#             i += 1
+#             c0 -= 1
             
-        while c1 > 0:
-            arr[i] = 1
-            i += 1
-            c1 -= 1
+#         while c1 > 0:
+#             arr[i] = 1
+#             i += 1
+#             c1 -= 1
             
-        while c2 > 0:
-            arr[i] = 2
-            i += 1
-            c2 -= 1
-ans = Solution()
-print(ans.sort012([0,2,0,1,2,1,0,2]))
+#         while c2 > 0:
+#             arr[i] = 2
+#             i += 1
+#             c2 -= 1
+# ans = Solution()
+# print(ans.sort012([0,2,0,1,2,1,0,2]))
 
 # class Solution():
 #     def sort012(self, arr):
@@ -214,23 +214,47 @@ print(ans.sort012([0,2,0,1,2,1,0,2]))
 # ans = Solution()
 # print(ans.sort012([0,2,0,1,2,1,0,2]))
 
-arr = [1,2,3,1,2,3,1,1,1]
-majority = None
-count = 0
-for num in arr:
-    if count == 0:
-        majority = num
-    if num == majority:
-        count+=1
-    else:
-        count -= 1
-count =0
-for num in arr:
-    if num == majority:
-        count+=1
+# arr = [1,2,3,1,2,3,1,1,1]
+# majority = None
+# count = 0
+# for num in arr:
+#     if count == 0:
+#         majority = num
+#     if num == majority:
+#         count+=1
+#     else:
+#         count -= 1
+# count =0
+# for num in arr:
+#     if num == majority:
+#         count+=1
         
-if count > len(arr)//2:
-    print(majority) 
-else:
-    print('-1') 
-print(count)
+# if count > len(arr)//2:
+#     print(majority) 
+# else:
+#     print('-1') 
+# print(count)
+
+arr = [12,3,25,12,35,65,85,98]
+k =52
+prefix_sum = 0
+max_len = 0
+hashmap = {}
+
+for i in range(len(arr)):
+    prefix_sum += arr[i]
+
+            # Case 1: If prefix_sum itself equals k
+    if prefix_sum == k:
+        max_len = i + 1
+
+            # Case 2: If (prefix_sum - k) seen before
+    if (prefix_sum - k) in hashmap:
+        length = i - hashmap[prefix_sum - k]
+        max_len = max(max_len, length)
+
+            # Store prefix_sum only if not already present
+    if prefix_sum not in hashmap:
+        hashmap[prefix_sum] = i
+
+print(max_len)
